@@ -1,0 +1,55 @@
+<header class="mui-bar header-bar">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" data-click="goOne"></a>
+    <h1 class="mui-title">内容</h1>
+</header>
+<div class="mui-content" style="padding-bottom:160px;">
+    <div class="mui-content-padded">
+        <div class="content" style="margin-bottom:20px;padding:0 5px;">{{html}}</div>
+        <ul class="mui-pager pager" style="position:fixed;bottom:130px;">
+            <li>
+                <a>当前页：{{current}}</a>
+            </li>
+            <li>
+                <a data-click="goto" data-page="read" data-index="{{current-1}}">
+                    上一页
+                </a>
+            </li>
+            <li>
+                <a data-click="goto" data-page="read" data-index="{{current+1}}">
+                    下一页
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="range">
+        <div class="mui-input-row mui-input-range field-contain">
+            <label>语速</label>
+            <input type="range" id='field-range' onchange="CDctrl.read.changeSpeed(this)" value="10" min="8" max="15"/>
+        </div>
+    </div>
+
+</div>
+<nav class="mui-bar mui-bar-tab footer-nav">
+    <a class="mui-tab-item footer-nav-cell" data-click="takePic">
+        <span class="mui-icon mui-icon-camera"></span>
+        <span class="mui-tab-label">拍照</span>
+    </a>
+    <a class="mui-tab-item footer-nav-cell">
+        <span class="mui-icon mui-icon-mic"></span>
+        <span class="mui-tab-label">录音</span>
+    </a>
+    <a class="mui-tab-item footer-nav-cell">
+        <div data-click="tts" class="playBtn">
+            <span class="mui-icon"><img src="img/play2.png" width="65%" alt=""></span>
+            <span class="mui-tab-label">播放</span>
+        </div>
+        <div data-click="ttsStop" class="stopBtn">
+            <span class="mui-icon"><img src="img/pause1.png" width="65%" alt=""></span>
+            <span class="mui-tab-label">暂停</span>
+        </div>
+    </a>
+    <a class="mui-tab-item footer-nav-cell">
+        <span class="mui-icon"><img src="img/shibie.png" width="65%" alt=""></span>
+        <span class="mui-tab-label">识别</span>
+    </a>
+</nav>
