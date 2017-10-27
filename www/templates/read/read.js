@@ -114,7 +114,7 @@ CDctrl.read = {
         $(".playBtn").css("display", "none");$(".stopBtn").css("display", "block");$(".range").css("display", "block");
         var text = "da4 xue2 zhi1 dao4 zai4 ming2 ming2 de2 zai4 qin1 min2 zai4 zhi3 yu2 zhi4 shan4";
         var words = text.split(" ");
-        CDdata.sound.src= 'audio/'+words[CDdata.audio_i]+".mp3";
+        CDdata.sound.src= 'audio/'+words[CDdata.audio_i].slice(0,1)+'/'+words[CDdata.audio_i]+".mp3";
         CDdata.sound.playbackRate = CDdata._speed;
         CDdata.sound.onended = function(){
             CDdata.audio_i++;
@@ -123,8 +123,8 @@ CDctrl.read = {
                 CDctrl.read.ttsStop();
                 return;
             }
-            CDdata.sound.src= 'audio/'+words[CDdata.audio_i]+".mp3";
-            CDdata.sound.playbackRate =CDdata._speed;
+            CDdata.sound.src= 'audio/'+words[CDdata.audio_i].slice(0,1)+'/'+words[CDdata.audio_i]+".mp3";
+            CDdata.sound.playbackRate = CDdata._speed;
             CDdata.sound.play();
         }
         CDdata.sound.play();
@@ -133,6 +133,7 @@ CDctrl.read = {
         $(".playBtn").css("display", "block");$(".stopBtn").css("display", "none");
         $(".range").css("display", "none");
         CDdata.sound.pause();
+        CDdata.sound.src="";
     },
     changeSpeed: function ($this) {
         CDdata._speed=$this.value / 10;

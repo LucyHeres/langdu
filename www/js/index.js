@@ -36,6 +36,7 @@ var app = {
             document.body.style.height = window.screen.height + "px";
 
         }
+
         //所有页面配置
         CDframe.init({// 所有的组件
             login: {},
@@ -60,10 +61,7 @@ var app = {
                 CDpages.back();
             }
         }
-
         document.addEventListener("backbutton", eventBackButton, false);
-
-
         CDpages.goto('login');
 
     }

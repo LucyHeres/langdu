@@ -24,7 +24,7 @@
     </platform>
     <engine name="android" spec="^6.3.0" />
     <engine name="browser" spec="^5.0.1" />
-    <plugin name="cordova-plugin-whitelist" spec="1" />
-    <plugin name="cordova-plugin-statusbar" spec="^2.2.3" />
     <plugin name="cordova-plugin-camera" spec="^2.4.1" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.2.3" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
 </widget>

@@ -94,10 +94,10 @@ input{
     outline: none;
 }
 /**
-   自写样式 start
+   ****************************自写样式 start***************************
  */
 body {
-    font-size:14px;
+    font-size:16px !important;
 }
 /* Portrait layout (default) */
 .app {
